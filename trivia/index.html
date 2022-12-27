@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <hr3>What does 10SM mean on a METAR?
+                </hr3>
+                <p></p>
+                <button class="wrong">Runway 10 in use.</button>
+                <button class="wrong">10,000 meter visibility</button>
+                <button class="wrong">Clouds at 10,000 feet</button>
+                <button class="right">10 statute miles visibility</button>
+
+                <p id="feedbackt"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the ICAO identifier for North Perry Airport?</h3>
+                <input type="text"></input>
+                <button id="check">Submit</button>
+                <p id="feedbackf"></p>
+            </div>
+        </div>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function(){
+                let right = document.querySelector('.right')
+                right.addEventListener('click', function(){
+                    right.style.backgroundColor = 'green';
+                    document.querySelector('#feedbackt').innerHTML = 'Right!';
+                });
+
+                let wrong = document.querySelectorAll('.wrong');
+                for (let i = 0; i < wrong.length; i++) {
+                    wrong[i].addEventListener('click', function(){
+                        wrong[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedbackf').innerHTML = 'Wrong!';
+                    });
+                }
+                document.querySelector('#check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value === 'KHWO'){
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedbackf').innerHTML = 'Right!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedbackf').innerHTML = 'Wrong!';
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

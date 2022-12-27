@@ -1,0 +1,26 @@
+{%extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+{% if alert == 1 %}
+<div class="alert">
+    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+    Quote could not be found!
+  </div>
+{% endif %}
+<form action="/sell" method="POST">
+    <div class="mb-3">
+        <label for="QuoteRequest" class="form-label">Symbol?</label>
+        <div class="mb-3">
+        <input type="text" class="form-control" id="quote-request" name="symbol">
+        </div>
+        <label for="ShareAmount" class="form-label">Amount?</label>
+        <input type="text" class="form-control" id="quote-shares" name="shares">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Sell</button>
+    </div>
+</form>
+{% endblock %}

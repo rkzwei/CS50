@@ -1,0 +1,62 @@
+/* <!--- Header pill color #ff3484--> */
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: #161616;
+    color: #864548
+  }
+.nav>li>a[href]{
+    color: #ff3484;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #ff3484;
+    background-color: #161616;
+}
+.nav>li{
+    margin-top: 2%;
+    margin-left: 1%;
+    background-color: #606060;
+    border-radius: 10%;
+}
+/* main{
+    background-color: #000
+} */
+.countdowns {
+    text-align: center;
+    margin-top: 20%
+
+
+}
+.headerrr {
+    display: inline-block;
+    text-align: center;
+  }
+.titletop {
+    display: inline-block;
+    margin-left: 2%;
+    color:#ff3484
+}
+.feed {
+    margin-top: 2%;
+}
+.loss {
+    display: block;
+    margin-left: auto;
+    margin-top: 15%;
+    width: 50%;
+}
+.btn {
+    display: block;
+    margin-left: 50%;
+    margin-top: 50%;
+    width: 50%;
+}
+.linkss>{
+    color: #ff3484;
+    margin-top: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: 22;
+}
+body {
+    background-color: #232023
+}

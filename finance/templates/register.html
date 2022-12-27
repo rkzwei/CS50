@@ -1,0 +1,30 @@
+{%extends "layout.html" %}
+
+{% block title %}
+Register
+{% endblock %}
+
+{% block main %}
+<form action="/register" method="POST">
+    <div class="mb-3">
+        <label for="UsernameRegister" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username-register" name="username">
+    </div>
+    <div class="mb-3">
+        <label for="PasswordRegister" class="form-label">Password</label>
+        <input type="password" class="form-control" required pattern=" ^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$ " id="password" name="password">
+        <div id="PasswordHelp" class="form-text">
+            At least 1 Uppercase -
+            At least 1 Lowercase -
+            At least 1 Number -
+            At least 1 Symbol -
+            Min 8 chars and Max 12 chars</div>
+    </div>
+    <div class="mb-3">
+        <label for="Confirmation" class="form-label">Confirm your Password</label>
+        <input type="password" class="form-control" id="confirmation" name="confirmation">
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+    </div>
+</form>
+{% endblock %}

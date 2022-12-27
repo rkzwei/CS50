@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+      <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <title>Countdown</title>
+        <div class="headerrr">
+          <div class="clock">
+            <iframe src="https://free.timeanddate.com/clock/i8nac3ub/n213/fn15/fs22/fcff3484/tct/pct/ahr/avt/ftb/tt0/tm1/th1/ta1" frameborder="0" width="405" height="28" allowtransparency="true"></iframe>
+          </div>
+          <div class="header pills">
+          <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./links.html">Useful Links</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./countdown.html">Countdown</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./feed.html">Feed</a>
+              </li>
+            </ul>
+            </div>
+          </div>
+
+
+    </head>
+    <body>
+      <main>
+        <div class="countdowns">
+          <div class="wallethub">
+            <iframe src="https://free.timeanddate.com/countdown/i8nabxdi/n233/cf12/cm0/cu4/ct0/cs1/ca1/cr0/ss1/cacff3484/cpcff3484/pct/tcfff/fs100/szw448/szh189/tatEntrevista/tacff3484/tpc000/matWallethub/macff3484/mpc000/iso2023-01-03T11:00:00/pd2" allowtransparency="true" frameborder="0" width="152" height="94"></iframe>
+          </div>
+        </div>
+      </main>
+      <script>
+        // TODO: Add code to check answers to questions
+        var audio = new Audio('./bpush.wav');
+        document.addEventListener('DOMContentLoaded', function(){
+            let navb = document.querySelector('.nav')
+            navb.addEventListener('click', function(){
+              audio.play();
+            })
+        });
+    </script>
+    </body>
+</html>

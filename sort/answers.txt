@@ -1,0 +1,10 @@
+sort1 uses: bubble sort
+How do you know?: By running the reverse500000, it took the longest, an identifier of the bubble sort handling the end of the list poorly
+
+sort2 uses: merge sort
+
+How do you know?: It ran faster than all of the other sorts in every big number scenario
+
+sort3 uses: selection sort
+
+How do you know?: it ran rather poorly all around and particularly horrible in the already sorted scenario, meaning it was iterating when it didn't need to, something the bubble wouldn't do

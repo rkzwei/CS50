@@ -1,0 +1,30 @@
+{%extends "layout.html" %}
+
+{% block title %}
+Quote
+{% endblock %}
+
+{% block main %}
+<form action="/quote" method="POST">
+    <div class="mb-3">
+        <label for="QuoteRequest" class="form-label">Symbol?</label>
+        <input type="text" class="form-control" id="quote-request" name="symbol">
+        <p></p>
+        <button type="submit" class="btn btn-primary">Quote</button>
+    </div>
+</form>
+<p>
+</p>
+<div class="card" style="width: 18rem;">
+    <div class="card-header">
+      {{symbol}}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ name }}</li>
+      <li class="list-group-item">{{ price }}</li>
+      <li class="list-group-item">{{ symbol }}</li>
+    </ul>
+  </div>
+<p>
+</p>
+{% endblock %}
